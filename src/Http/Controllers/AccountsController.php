@@ -18,7 +18,7 @@ final class AccountsController extends Controller
         $teamId = $request->user()?->currentTeam?->getKey();
         $items = app(AccountsQuery::class)->visible(null, $teamId)->latest()->paginate(min($request->integer('page_size', 25), 100));
 
-        return response()->json(['data' => $items->through(fn (Model $item): array => $this->resource($item))]);
+        return response()->json($items->through(fn (Model $item): array => $this->resource($item)));
     }
 
     public function show(Request $request, AccountsRecord $account): JsonResponse
