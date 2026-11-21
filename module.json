@@ -3,7 +3,7 @@
   "name": "browser-game-accounts-api",
   "display_name": "Browser Game Accounts API",
   "description": "Versioned authenticated account catalog and progress API.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "category": "presentation",
   "provider": "Liberu\\BrowserGame\\AccountsApi\\AccountsApiServiceProvider",
   "requires": {
